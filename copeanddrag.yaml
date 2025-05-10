@@ -1,0 +1,48 @@
+shape:
+  selector: CommitNode
+  value: circle
+color:
+  - selector: Root
+    value: '#4B0082'
+  - selector: CommitNode
+    value: '#98F998'
+label:
+  - selector: CommitNode
+    text: n.fileState
+size:
+  selector: CommitNode
+  value: 25
+constraints:
+  - orientation:
+      selector: next
+      directions:
+        - below
+        - right
+    spacing: 20
+  - orientation:
+      selector: unusedCommits
+      directions:
+        - below
+    spacing: 20
+  - orientation:
+      selector: outgoingBranches
+      directions:
+        - directlyRight
+    spacing: 20
+  - orientation:
+      selector: prevBranchNode
+      directions:
+        - directlyLeft
+      spacing: 20
+directives:
+  - flag: hideDisconnectedBuiltIns
+  - style: edge.arrowSize=0.5
+  - style: node.fontSize=10
+  - style: levelSeparation=50
+  - style: nodeSpacing=40
+  - style: edge.curvature=0
+
+
+
+
+
